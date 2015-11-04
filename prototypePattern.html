@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html>
+<head>
+<title> EMPLOYEE PATTERN </title>
+<script type = "text/javascript">
+// The javascript constructor pattern starts here
+function Employee (name, job, salary){
+this.name = "Adam";
+this.job = "Professor";
+this.salary = "50,000";
+} 
+Employee.prototype ={ // getSalary prototype function
+constructor : Employee,
+getSalary : function()
+{
+console.log("Salary is "+this.salary);
+}
+};
+var employee1 = new Employee();
+console.log(employee1.name);// Adam
+console.log(employee1.job);// Professor
+employee1.getSalary(); // the protype function gives value USD 50,000
+</script>
+</head>
+<body>
+<b>OUTPUT ON CONSOLE...</b>
+</body>
+</html>

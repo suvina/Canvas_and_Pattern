@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html>
+<head>
+<title> EMPLOYEE and MANAGER</title>
+<script type = "text/javascript">
+
+function Employee (){
+this.name =0;
+this.job = 0;
+this.salary=0;
+this.getSalary = function(salary){
+this.salary=salary;
+return this.salary;
+
+}
+} 
+//Manager Constructor starts here
+
+function Manager (){}
+Manager.prototype = new Employee();
+
+var employee1 = new Employee();
+console.log("Employee's Salary: "+employee1.getSalary("1000"));
+Manager.prototype.getSalary = function (salary) {
+this.salary = salary;
+salary = parseInt(salary) + parseInt((0.5 * salary)); 
+return salary; 
+};
+var manager1 = new Manager();
+console.log("Manager's Salary: "+manager1.getSalary("1000"));
+</script>
+</head>
+<body>
+<b>OUTPUT ON CONSOLE...</b>
+</body>
+</html>
